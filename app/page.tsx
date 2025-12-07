@@ -41,11 +41,6 @@ export default function TodoPage(){
         </div>
         </li>
         ))}
-        {/* <li className="list-group-item d-flex justify-content-between align-items-center">Sample Task
-          <button className="btn btn-danger btn-sm">Delete</button>
-        </li>
-        <li className="list-group-item d-flex justify-content-between align-items-center">Sample </li> */}
-
       </ul>
     </div>
 )
