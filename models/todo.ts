@@ -1,7 +1,14 @@
 import mongoose from "mongoose";
 const todoSchema=new mongoose.Schema({
-    text:String,
-    isCompleted:Boolean,
+    text:{
+        type:String,
+        required:true,
+        trim:true,
+    },
+    isCompleted:{
+        type:Boolean,
+        default:false,
+    },
 });
 
 export default mongoose.models.Todo || mongoose.model("Todo", todoSchema);
