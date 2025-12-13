@@ -50,7 +50,7 @@ export default function TodoPage(){
   };
 
   //Complete Task function
-  const completeTask=async(idToComp:string, completed:boolean)=>{
+  const completeTask=async(idToComp:string)=>{
     await fetch("/api/todos", {
       method: "PUT",
       headers: {"Content-Type":"application/json"},
@@ -113,7 +113,7 @@ export default function TodoPage(){
             <span className={taskItem.isCompleted ? "text-decoration-line-through" : ""}>{taskItem.text} </span>
 
             <div className="d-flex gap-2">
-              <button className="btn btn-success btn-sm" onClick={()=>completeTask(taskItem._id,taskItem.isCompleted)}>Complete</button>
+              <button className="btn btn-success btn-sm" onClick={()=>completeTask(taskItem._id)}>Complete</button>
               <button className="btn btn-danger btn-sm" onClick={()=>delTask(taskItem._id)}>Delete</button>
             </div>
           </li>
